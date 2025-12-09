@@ -1,6 +1,7 @@
+ZABBIX is the monitoring tool we use to extract , parse and graph 3CX servers API data
+
 # 3cx-v20-api
 extracting 3cx v20 information from API
-
 
 All the information inside the script has been retrieved by enabling developper mode and then analyzing requests.
 This script extracts SystemStatus but can be used to extract anything from xapi/v1/ (just append xapi/v1/ to your 3cx URL to get full list of what you can retrieve with the API)
@@ -15,7 +16,7 @@ update :
 
 <pre> ./v20-api.sh https://mycompany.my3cx.fr 500 str0nGp@@@sw0rD foo </pre>
 
-# example of output:
+# example of output with /SystemStatus:
 <pre>
 {
   "@odata.context": "https://XXXXXXX/xapi/v1/metadata#SystemStatus",
@@ -69,4 +70,23 @@ update :
   "ChatUsedSpace": 16168602,
   "LogUsedSpace": 90558478
 }
+</pre>
+
+# example of output with /ActiveCalls:
+
+<pre>
+{
+  "@odata.context": "https://XXXXXXX.my3cx.fr/xapi/v1/$metadata#ActiveCalls",
+  "value": [
+    {
+      "Id": 2440,
+      "Caller": "XXXX XXX XX XXX (06XXXXX)",
+      "Callee": "XXX YYY, YYYY",
+      "Status": "Talking",
+      "LastChangeStatus": "2025-12-09T15:40:19Z",
+      "EstablishedAt": "2025-12-09T15:40:19Z",
+      "ServerNow": "2025-12-09T15:41:17.2293002Z"
+    }
+  ]
+} 
 </pre>
