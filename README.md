@@ -7,6 +7,9 @@ This script extracts SystemStatus but can be used to extract anything from xapi/
 
 Another example is /xapi/v1/ActiveCalls which returns all active calls (internal , inbound , outbound, ...) the possibilities are limitless 
 
+update : 
+- Does not work if the extension used with the script has MFA enabled
+- you can use the REST API to achieve the same result, but it is only available with Entreprise licence. 
 
 # example of use :
 
