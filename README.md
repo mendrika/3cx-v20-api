@@ -10,7 +10,7 @@ Another example is /xapi/v1/ActiveCalls which returns all active calls (internal
 
 # example of use :
 
-./v20-api.sh https://mycompany.my3cx.fr 500 str0nGp@@@sw0rD foo
+<pre> ./v20-api.sh https://mycompany.my3cx.fr 500 str0nGp@@@sw0rD foo </pre>
 
 # example of output:
 <pre>
