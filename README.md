@@ -13,9 +13,9 @@ Another example is /xapi/v1/ActiveCalls which returns all active calls (internal
 ./v20-api.sh https://mycompany.my3cx.fr 500 str0nGp@@@sw0rD foo
 
 # example of output:
-
+<pre>
 {
-  "@odata.context": "https://XXXXXXX/xapi/v1/$metadata#SystemStatus",
+  "@odata.context": "https://XXXXXXX/xapi/v1/metadata#SystemStatus",
   "FQDN": "XXXXXXX.my3cx.fr",
   "Version": "20.0.7.1080",
   "Activated": true,
@@ -66,3 +66,4 @@ Another example is /xapi/v1/ActiveCalls which returns all active calls (internal
   "ChatUsedSpace": 16168602,
   "LogUsedSpace": 90558478
 }
+</pre>
